@@ -31,7 +31,7 @@ npm run build
 
 # Hole
 
-> Router
+- Router
   1. Add route.js to ur project(No '/' when .js have a child)
   2. bind attr'index' with path in route.js
   3. set ':router="true"'
