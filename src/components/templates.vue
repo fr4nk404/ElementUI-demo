@@ -1,0 +1,67 @@
+<template>
+    <div id="app1">
+            <el-container >
+                <el-main>
+                    <div style="text-align: right;"><i class="el-icon-edit">&nbsp;</i>添加新模板</div>
+                    <div style="margin-top: 15px;">
+                        <el-input placeholder="请输入内容" v-model="input">
+                            <template slot="append" icon="el-icon-search">搜索</template>
+                        </el-input>
+                    </div>
+                    <div style="text-align: left; margin: 5px;">筛选显示内容：
+                        <el-select v-model="value" placeholder="请选择">
+                            <el-option
+                                    v-for="item in options"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </div>
+                    <el-table :data="tableData">
+                        <el-table-column prop="date" label="NO." width="140">
+                        </el-table-column>
+                        <el-table-column prop="name" label="VULN CLASS" width="600">
+                        </el-table-column>
+                        <el-table-column prop="address" label="FINISHED">
+                        </el-table-column>
+                    </el-table>
+                </el-main>
+            </el-container>
+    </div>
+</template>
+
+<style>
+    #app1 {
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+    }
+
+</style>
+<script>
+    export default {
+            data() {
+                const item = {
+                    date: '1',
+                    name: '反射型xss',
+                    address: '✔️',
+                };
+                return {
+                    tableData: Array(1).fill(item),
+                    options: [{
+                    value: '选项1',
+                    label: '全部'
+                    }, {
+                    value: '选项2',
+                    label: '已完成'
+                    }, {
+                    value: '选项3',
+                    label: '待完善'
+                    }],
+                    value: ''
+                }
+            }
+    }
+</script>
+
+
