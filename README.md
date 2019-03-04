@@ -31,8 +31,8 @@ npm run build
 
 # Hole
 
-- Router
-  1. Add route.js to ur project(No '/' when .js have a child)
-  2. bind attr'index' with path in route.js
-  3. set ':router="true"'
-  4. '<router-view></router-view>' to replace the content to be replaced.
+## Router
+1. Add route.js to ur project(No '/' when .js have a child)
+2. bind attr'index' with path in route.js
+3. set ':router="true"'
+4. '<router-view></router-view>' to replace the content to be replaced.
