@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
-import router from './router'
+import router from '~/router'
 import VueRouter from 'vue-router'
 import 'element-ui/lib/theme-chalk/index.css'
-import App from './App.vue'
+import App from '~/App.vue'
+import Axios from 'axios'
+
+Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+Vue.config.productionTip = false;
+Vue.prototype.$axions = Axios;
 
 Vue.use(ElementUI);
 Vue.use(VueRouter);

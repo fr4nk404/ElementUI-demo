@@ -2,14 +2,14 @@
     <div id="app1">
         <el-container >
             <el-main>
-                <div style="text-align: right; "><i class="el-icon-edit">&nbsp;</i>新建插件</div>
-                <div style="margin-top: 15px;">
+                <div style="text-align: right;"><i class="el-icon-edit">&nbsp;</i><router-link :to="{path:'newplugin'}" style="font-size: 14px;color: black; text-decoration: none;">新建插件</router-link></div>
+                <div style="margin-top: 5px;">
                     <el-input placeholder="请输入内容" v-model="input">
                         <template slot="append" icon="el-icon-search">搜索</template>
                     </el-input>
                 </div>
 
-                <div style="text-align: left; margin: 5px;">筛选显示内容：
+                <div style="text-align: left; margin-top: 15px;">筛选显示内容：&nbsp;&nbsp;&nbsp;
                     <el-select v-model="value" placeholder="请选择">
                         <el-option
                                 v-for="item in options"
@@ -47,10 +47,9 @@
         data() {
             const item = {
                 number: '1',
-                plugin: 'web scan',
+                plugin: 'xss扫描',
                 status: '审核通过',
                 published: '✔️'
-
             };
             return {
                 tableData: Array(1).fill(item),

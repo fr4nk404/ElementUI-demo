@@ -1,0 +1,80 @@
+#app1 {
+    font-family: Helvetica, sans-serif;
+    width:1200px;
+    text-align: center;
+    justify-content: center;
+}
+
+.div-pl {
+    text-align: left;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+
+.el-pf {
+    width: 800px;
+    text-align: center;
+}
+
+.poc-show {
+    position: relative;
+}
+
+.poc-sl {
+    position: absolute;
+
+    left: 350px;
+    top: 10px;
+}
+
+.div-pl {
+    text-align: left;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+
+.sp-pf {
+    width: 40px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 50px;
+    padding-right: 30px;
+}
+
+.but {
+    text-align: center;
+}
+
+
+.eb-pf {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 60px;
+}
+.eb-spf {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 160px;
+}
+
+.sp-pf1 {
+    width: 40px;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 50px;
+    padding-right: 30px;
+}
+
+.er-pf {
+    margin: 25px;
+    display: block;
+}
+
+.ef-pf {
+    width: 800px;
+    border: 1px solid #0094ff;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+}

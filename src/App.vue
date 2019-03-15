@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <el-container>
-      <el-aside width="20%">
+      <el-aside class="ea" width="20%">
         <div class="user" id="user" style="margin-top: 30%">
           <div class="info_text" style="width: 70%; display: inline-block; float: left;">
             <h3>Frank</h3>
             <h4>fr4nk404@gmail.com</h4>
           </div>
           <div class="avator_box">
-              <img src="./assets/photo.png" style="width: 30%; height: 100%;"></img>
+              <img src="./assets/photo.png" alt="logo" style="width: 30%; height: 100%;" />
           </div>
         </div>
 
@@ -20,7 +20,7 @@
                         <el-menu-item  index="/pluginslist">插件列表</el-menu-item>
                         <el-menu-item index="/myplugins">我的插件</el-menu-item>
                         <el-menu-item index="/reviews">我的Review</el-menu-item>
-                        <el-menu-item index="/checking">我的审核</el-menu-item>
+                        <el-menu-item index="/checking">我的Check</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
                 <el-menu-item index="/templates" >模板管理</el-menu-item>
@@ -56,8 +56,9 @@
     line-height: 60px;
 }
 
-.el-aside {
+.ea {
     color: #333;
+    border-right: 1px solid #B3C0D1 ;
 }
 
 </style>
@@ -66,10 +67,12 @@
 <script>
   export default {
       data() {
+
           const item = {
               name: 'Frank',
               address: 'fr4nk404@gmail.com'
           };
+
           return {
               tableData: Array(20).fill(item)
           }

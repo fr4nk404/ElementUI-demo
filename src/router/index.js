@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import App from '../App.vue'
-import EntryMain from '../components/main.vue'
-import Templates from '../components/templates.vue'
-import Checking from '../components/plugins/checking.vue'
-import MyPlugins from '../components/plugins/myplugins.vue'
-import NewPlugins from '../components/plugins/newplugin.vue'
-import PluginsList from '../components/plugins/pluginslist.vue'
-import Reviews from '../components/plugins/reviews.vue'
-import NewTemp from '../components/templates/newtemp.vue'
+import App from '~/App.vue'
+import EntryMain from '~/components/main.vue'
+import Templates from '~/components/templates.vue'
+import Checking from '~/components/plugins/checking.vue'
+import MyPlugins from '~/components/plugins/myplugins.vue'
+import NewPlugins from '~/components/plugins/newplugin.vue'
+import PluginsList from '~/components/plugins/pluginslist.vue'
+import Reviews from '~/components/plugins/reviews.vue'
+import NewTemp from '~/components/templates/newtemp.vue'
 
 
 
@@ -24,6 +24,11 @@ export default new VueRouter({
                 component: EntryMain,
                 meta: {title: 'Phantasm'},
                 children: [
+                    {
+                        path: '/newplugin',
+                        component: NewPlugins ,
+                        meta: {title: 'Phantasm'}
+                    },
                     {
                         path: '/pluginslist',
                         component: PluginsList,

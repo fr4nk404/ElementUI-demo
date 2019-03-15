@@ -1,8 +1,10 @@
-const resolve = require('path').resolve
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const url = require('url')
-const publicPath = ''
+const resolve = require('path').resolve;
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const url = require('url');
+const publicPath = '';
+
+
 
 module.exports = (options = {}) => ({
   entry: {
@@ -64,11 +66,13 @@ module.exports = (options = {}) => ({
         pathRewrite: {
           '^/api': ''
         }
-      }
+      },
+
     },
     historyApiFallback: {
       index: url.parse(options.dev ? '/assets/' : publicPath).pathname
-    }
+    },
+    disableHostCheck: true
   },
   devtool: options.dev ? '#eval-source-map' : '#source-map'
 })
